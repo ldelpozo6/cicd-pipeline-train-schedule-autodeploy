@@ -30,7 +30,7 @@ node {
                 remote.host = "$kubemaster_ip"
                 remote.allowAnyHosts = true
                 
-                def CANARY_REPLICAS=1
+                CANARY_REPLICAS=1
                 
                 echo "### Updating canary deployment file on kubernetes ####"
                 sh "sed -i 's|\$CANARY_REPLICAS|${CANARY_REPLICAS}|g' ${WORKSPACE}/train-schedule-kube-canary.yml"
