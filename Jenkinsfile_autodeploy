@@ -81,7 +81,7 @@ node {
                     sshCommand remote: remote, command: "kubectl apply -f train-schedule-kube.yml"
                 }
         }
-        stage (cleanup) {
+        stage ('Cleanup') {
                 def remote = [:]
                 remote.name = "kubemaster"
                 remote.host = "$kubemaster_ip"
